@@ -1,0 +1,81 @@
+{
+  "label_names": {
+    "0": "bound",
+    "1": "collision",
+    "2": "escape"
+  },
+  "proposal_names": {
+    "0": "virial",
+    "1": "cold_close",
+    "2": "hot_kick",
+    "3": "binary_intruder"
+  },
+  "splits": {
+    "test": {
+      "class_counts": {
+        "bound": 3000,
+        "collision": 3000,
+        "escape": 3000
+      },
+      "counterfactual_bases_successful": 810,
+      "counterfactual_bases_tested": 5056,
+      "counterfactual_fraction_realized": 0.18,
+      "proposal_counts_retained": {
+        "binary_intruder": 430,
+        "cold_close": 380,
+        "hot_kick": 1232,
+        "virial": 6958
+      },
+      "rejected_ambiguous": 2013,
+      "rejected_observed_event": 10582,
+      "retained": 9000,
+      "retained_counterfactual": 1620,
+      "simulated": 29568,
+      "skipped_quota_full": 3717
+    },
+    "train": {
+      "class_counts": {
+        "bound": 10000,
+        "collision": 10000,
+        "escape": 10000
+      },
+      "counterfactual_bases_successful": 2700,
+      "counterfactual_bases_tested": 17856,
+      "counterfactual_fraction_realized": 0.18,
+      "proposal_counts_retained": {
+        "binary_intruder": 1367,
+        "cold_close": 1354,
+        "hot_kick": 4101,
+        "virial": 23178
+      },
+      "rejected_ambiguous": 6900,
+      "rejected_observed_event": 37124,
+      "retained": 30000,
+      "retained_counterfactual": 5400,
+      "simulated": 103296,
+      "skipped_quota_full": 14310
+    },
+    "val": {
+      "class_counts": {
+        "bound": 1500,
+        "collision": 1500,
+        "escape": 1500
+      },
+      "counterfactual_bases_successful": 405,
+      "counterfactual_bases_tested": 2752,
+      "counterfactual_fraction_realized": 0.18,
+      "proposal_counts_retained": {
+        "binary_intruder": 195,
+        "cold_close": 197,
+        "hot_kick": 609,
+        "virial": 3499
+      },
+      "rejected_ambiguous": 1034,
+      "rejected_observed_event": 5507,
+      "retained": 4500,
+      "retained_counterfactual": 810,
+      "simulated": 15360,
+      "skipped_quota_full": 1930
+    }
+  }
+}

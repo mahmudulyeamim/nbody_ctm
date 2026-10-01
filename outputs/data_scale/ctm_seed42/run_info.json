@@ -1,0 +1,104 @@
+{
+  "data_path": "/home/a6000/Yeamim/pgd/nbody_ctm/data/nbody_data_scale.npz",
+  "dataset_generation": {
+    "label_names": {
+      "0": "bound",
+      "1": "collision",
+      "2": "escape"
+    },
+    "proposal_names": {
+      "0": "virial",
+      "1": "cold_close",
+      "2": "hot_kick",
+      "3": "binary_intruder"
+    },
+    "splits": {
+      "test": {
+        "class_counts": {
+          "bound": 3000,
+          "collision": 3000,
+          "escape": 3000
+        },
+        "counterfactual_bases_successful": 810,
+        "counterfactual_bases_tested": 4032,
+        "counterfactual_fraction_realized": 0.18,
+        "proposal_counts_retained": {
+          "binary_intruder": 539,
+          "cold_close": 429,
+          "hot_kick": 1295,
+          "virial": 6737
+        },
+        "rejected_ambiguous": 1997,
+        "rejected_observed_event": 6263,
+        "retained": 9000,
+        "retained_counterfactual": 1620,
+        "simulated": 21888,
+        "skipped_quota_full": 1187
+      },
+      "train": {
+        "class_counts": {
+          "bound": 10000,
+          "collision": 10000,
+          "escape": 10000
+        },
+        "counterfactual_bases_successful": 2700,
+        "counterfactual_bases_tested": 14912,
+        "counterfactual_fraction_realized": 0.18,
+        "proposal_counts_retained": {
+          "binary_intruder": 1706,
+          "cold_close": 1483,
+          "hot_kick": 4093,
+          "virial": 22718
+        },
+        "rejected_ambiguous": 7168,
+        "rejected_observed_event": 21826,
+        "retained": 30000,
+        "retained_counterfactual": 5400,
+        "simulated": 76288,
+        "skipped_quota_full": 4231
+      },
+      "val": {
+        "class_counts": {
+          "bound": 1500,
+          "collision": 1500,
+          "escape": 1500
+        },
+        "counterfactual_bases_successful": 405,
+        "counterfactual_bases_tested": 2304,
+        "counterfactual_fraction_realized": 0.18,
+        "proposal_counts_retained": {
+          "binary_intruder": 249,
+          "cold_close": 235,
+          "hot_kick": 642,
+          "virial": 3374
+        },
+        "rejected_ambiguous": 1077,
+        "rejected_observed_event": 3375,
+        "retained": 4500,
+        "retained_counterfactual": 810,
+        "simulated": 11904,
+        "skipped_quota_full": 870
+      }
+    }
+  },
+  "model_name": "ctm",
+  "normalization": {
+    "mass_mean": 1.008481933305992,
+    "mass_std": 0.3228427898283985,
+    "state_mean": [
+      -0.0005728426040150225,
+      8.47220653668046e-05,
+      0.001127266208641231,
+      0.001921699265949428
+    ],
+    "state_std": [
+      0.6775557994842529,
+      0.6751882433891296,
+      1.5777748823165894,
+      1.5670360326766968
+    ]
+  },
+  "parameters": 214405,
+  "peak_gpu_memory_bytes": 203866112,
+  "seed": 42
+}

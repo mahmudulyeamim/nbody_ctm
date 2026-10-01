@@ -1,0 +1,81 @@
+{
+  "label_names": {
+    "0": "bound",
+    "1": "collision",
+    "2": "escape"
+  },
+  "proposal_names": {
+    "0": "virial",
+    "1": "cold_close",
+    "2": "hot_kick",
+    "3": "binary_intruder"
+  },
+  "splits": {
+    "test": {
+      "class_counts": {
+        "bound": 100,
+        "collision": 100,
+        "escape": 100
+      },
+      "counterfactual_bases_successful": 15,
+      "counterfactual_bases_tested": 128,
+      "counterfactual_fraction_realized": 0.1,
+      "proposal_counts_retained": {
+        "binary_intruder": 18,
+        "cold_close": 14,
+        "hot_kick": 35,
+        "virial": 233
+      },
+      "rejected_ambiguous": 82,
+      "rejected_observed_event": 275,
+      "retained": 300,
+      "retained_counterfactual": 30,
+      "simulated": 896,
+      "skipped_quota_full": 112
+    },
+    "train": {
+      "class_counts": {
+        "bound": 200,
+        "collision": 200,
+        "escape": 200
+      },
+      "counterfactual_bases_successful": 30,
+      "counterfactual_bases_tested": 192,
+      "counterfactual_fraction_realized": 0.1,
+      "proposal_counts_retained": {
+        "binary_intruder": 33,
+        "cold_close": 41,
+        "hot_kick": 66,
+        "virial": 460
+      },
+      "rejected_ambiguous": 143,
+      "rejected_observed_event": 461,
+      "retained": 600,
+      "retained_counterfactual": 60,
+      "simulated": 1536,
+      "skipped_quota_full": 165
+    },
+    "val": {
+      "class_counts": {
+        "bound": 50,
+        "collision": 50,
+        "escape": 50
+      },
+      "counterfactual_bases_successful": 7,
+      "counterfactual_bases_tested": 64,
+      "counterfactual_fraction_realized": 0.09333333333333334,
+      "proposal_counts_retained": {
+        "binary_intruder": 10,
+        "cold_close": 5,
+        "hot_kick": 26,
+        "virial": 109
+      },
+      "rejected_ambiguous": 31,
+      "rejected_observed_event": 99,
+      "retained": 150,
+      "retained_counterfactual": 14,
+      "simulated": 384,
+      "skipped_quota_full": 29
+    }
+  }
+}

@@ -1,0 +1,4 @@
+difficulty,n,mean_settle_tick_all,mean_final_certainty,n_bound,n_collision,n_escape
+easy,9,1.0,0.001439597923308611,3,3,3
+medium,9,1.0,0.0014455914497375488,3,3,3
+hard,12,1.0,0.0014354536542668939,4,4,4

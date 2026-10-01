@@ -1,0 +1,78 @@
+experiment_name: nbody_ctm_intermediate
+
+data:
+  output_path: data/nbody_intermediate.npz
+  seed: 42
+  n_train: 8000
+  n_val: 1500
+  n_test: 3000
+  n_bodies: 6
+  obs_steps: 24
+  hidden_steps: 90
+  dt: 0.018
+  G: 1.0
+  softening: 0.045
+  collision_radius: 0.035
+  escape_radius: 5.5
+  escape_energy_margin: 0.03
+  escape_radial_velocity: 0.02
+  escape_persistence: 4
+  guard_steps: 6
+  bound_radius_fraction: 0.97
+  bound_collision_clearance: 1.15
+  bound_energy_ceiling: 10.0
+  proposal_probs: [0.72, 0.08, 0.13, 0.07]
+  simulation_batch_size: 128
+  max_generation_batches: 5000
+  counterfactual_fraction: 0.18
+  counterfactual_velocity_epsilon: 0.08
+  augmentation:
+    enabled: true
+    rotation: true
+    permute_bodies: true
+
+model:
+  encoder:
+    type: graph_temporal
+    d_hidden: 64
+    d_out: 80
+    temporal_blocks: 1
+    graph_blocks: 1
+    temporal_kernel: 5
+    temporal_stride: 2
+    dropout: 0.05
+  ctm:
+    iterations: 12
+    d_model: 96
+    d_input: 80
+    heads: 4
+    n_synch_out: 128
+    n_synch_action: 128
+    synapse_depth: 3
+    memory_length: 6
+    memory_hidden_dims: 24
+    deep_nlms: true
+    dropout: 0.05
+    dropout_nlm: 0.0
+    n_random_pairing_self: 16
+    pairing_seed: 17
+    final_ce_weight: 0.5
+  gru_hidden: 128
+
+training:
+  epochs: 30
+  batch_size: 48
+  eval_batch_size: 96
+  lr: 0.001
+  min_lr: 0.00001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  early_stopping_patience: 8
+  amp: true
+  bf16: true
+  num_workers: 0
+
+analysis:
+  batch_size: 32
+  max_internal_examples: 2500
+  silhouette_examples: 1200

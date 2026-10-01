@@ -1,0 +1,33 @@
+{
+  "attention_event_body_counts": {
+    "collision": 3000,
+    "escape": 3000
+  },
+  "checkpoint": "outputs/capacity_scale/ctm_seed42/best_final.pt",
+  "counterfactual_pairs_analyzed": 810,
+  "final_metrics": {
+    "accuracy": 0.5848888888888889,
+    "auc_ovr_macro": 0.7592768333333334,
+    "balanced_accuracy": 0.5848888888888889,
+    "brier": 0.5295915961503722,
+    "ece": 0.07166323589947489,
+    "macro_f1": 0.5817480607136248,
+    "mean_confidence": 0.5638120174407959
+  },
+  "mean_settle_tick": 5.438777777777778,
+  "most_certain_metrics": {
+    "accuracy": 0.5028888888888889,
+    "auc_ovr_macro": 0.7141739166666666,
+    "balanced_accuracy": 0.5028888888888888,
+    "brier": 0.6656048208165322,
+    "ece": 0.2584707572460175,
+    "macro_f1": 0.451599834394228,
+    "mean_confidence": 0.7613596320152283
+  },
+  "n_test": 9000,
+  "notes": [
+    "Attention recorded at thought step t is upstream of the synapse/NLM update and therefore feeds the prediction stored for that same loop step; it should not be interpreted as explaining the pre-update state that entered the step.",
+    "Outcome margin is a simulator-derived heuristic; difficulty bins are class-conditional to avoid class confounding.",
+    "Counterfactual twins differ by a small initial velocity perturbation and have different simulated futures; they are intended for internal-dynamics analysis, not as a causal proof about neurons."
+  ]
+}

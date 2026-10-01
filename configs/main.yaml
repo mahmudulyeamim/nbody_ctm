@@ -1,0 +1,87 @@
+experiment_name: nbody_ctm_main
+
+data:
+  output_path: data/nbody_main.npz
+  seed: 42
+  n_train: 30000
+  n_val: 4500
+  n_test: 9000
+  # Seven-body systems are substantially more chaotic than the six-body pilot while
+  # remaining cheap enough for a ~10 GB Colab GPU.
+  n_bodies: 7
+  # 48 fine-grained observations at dt=.009 cover the same short physical window
+  # (~0.43 time units) as the quick configuration; higher temporal resolution does
+  # not reveal a longer future.
+  obs_steps: 48
+  hidden_steps: 180
+  dt: 0.009
+  G: 1.0
+  softening: 0.045
+  collision_radius: 0.035
+  escape_radius: 5.5
+  escape_energy_margin: 0.03
+  escape_radial_velocity: 0.02
+  escape_persistence: 4
+  guard_steps: 12
+  bound_radius_fraction: 0.97
+  bound_collision_clearance: 1.15
+  bound_energy_ceiling: 10.0
+  proposal_probs: [0.72, 0.08, 0.13, 0.07]
+  simulation_batch_size: 256
+  max_generation_batches: 5000
+  # A deliberately hard subset: near-identical +/- velocity perturbations that
+  # produce different simulated futures. Pair IDs never cross data splits.
+  counterfactual_fraction: 0.25
+  counterfactual_velocity_epsilon: 0.06
+  augmentation:
+    enabled: true
+    rotation: true
+    permute_bodies: true
+
+model:
+  encoder:
+    type: graph_temporal
+    d_hidden: 112
+    d_out: 144
+    temporal_blocks: 2
+    graph_blocks: 2
+    temporal_kernel: 5
+    temporal_stride: 2
+    dropout: 0.10
+  ctm:
+    iterations: 14
+    d_model: 192
+    d_input: 144
+    heads: 6
+    n_synch_out: 320
+    n_synch_action: 320
+    synapse_depth: 4
+    memory_length: 10
+    memory_hidden_dims: 40
+    deep_nlms: true
+    dropout: 0.10
+    dropout_nlm: 0.02
+    n_random_pairing_self: 32
+    pairing_seed: 17
+    # Task-specific stabilizer. Set to 0.0 to reproduce the pure official-style
+    # adaptive classification objective.
+    final_ce_weight: 0.5
+  gru_hidden: 192
+
+training:
+  epochs: 24
+  batch_size: 64
+  eval_batch_size: 96
+  lr: 0.0007
+  min_lr: 0.000005
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  early_stopping_patience: 6
+  amp: true
+  bf16: true
+  num_workers: 2
+
+analysis:
+  batch_size: 32
+  max_internal_examples: 2500
+  silhouette_examples: 1200

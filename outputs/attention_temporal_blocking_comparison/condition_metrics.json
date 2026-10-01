@@ -1,0 +1,405 @@
+{
+  "class_order": [
+    "bound",
+    "collision",
+    "escape"
+  ],
+  "conditions": [
+    {
+      "accuracy": 0.6388888888888888,
+      "accuracy_drop": 0.0,
+      "condition": "baseline",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2063,
+          924,
+          13
+        ],
+        [
+          918,
+          1603,
+          479
+        ],
+        [
+          325,
+          591,
+          2084
+        ]
+      ],
+      "macro_f1": 0.6419380646674141,
+      "macro_f1_drop": 0.0,
+      "model": "original",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 3306,
+        "collision": 3118,
+        "escape": 2576
+      },
+      "prediction_flip_percent": 0.0,
+      "prediction_flips": 0
+    },
+    {
+      "accuracy": 0.6396666666666667,
+      "accuracy_drop": -0.0007777777777778772,
+      "condition": "early",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2069,
+          914,
+          17
+        ],
+        [
+          925,
+          1561,
+          514
+        ],
+        [
+          326,
+          547,
+          2127
+        ]
+      ],
+      "macro_f1": 0.6416783431168789,
+      "macro_f1_drop": 0.00025972155053521906,
+      "model": "original",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 3320,
+        "collision": 3022,
+        "escape": 2658
+      },
+      "prediction_flip_percent": 1.2333333333333334,
+      "prediction_flips": 111
+    },
+    {
+      "accuracy": 0.6391111111111111,
+      "accuracy_drop": -0.00022222222222223476,
+      "condition": "middle",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2067,
+          916,
+          17
+        ],
+        [
+          925,
+          1564,
+          511
+        ],
+        [
+          326,
+          553,
+          2121
+        ]
+      ],
+      "macro_f1": 0.641244013251668,
+      "macro_f1_drop": 0.0006940514157460775,
+      "model": "original",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 3318,
+        "collision": 3033,
+        "escape": 2649
+      },
+      "prediction_flip_percent": 1.2222222222222223,
+      "prediction_flips": 110
+    },
+    {
+      "accuracy": 0.39244444444444443,
+      "accuracy_drop": 0.2464444444444444,
+      "condition": "late",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2934,
+          66,
+          0
+        ],
+        [
+          2658,
+          310,
+          32
+        ],
+        [
+          1641,
+          1071,
+          288
+        ]
+      ],
+      "macro_f1": 0.295450894576576,
+      "macro_f1_drop": 0.3464871700908381,
+      "model": "original",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 7233,
+        "collision": 1447,
+        "escape": 320
+      },
+      "prediction_flip_percent": 58.82222222222222,
+      "prediction_flips": 5294
+    },
+    {
+      "accuracy": 0.6491111111111111,
+      "accuracy_drop": 0.0,
+      "condition": "baseline",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2027,
+          936,
+          37
+        ],
+        [
+          839,
+          1569,
+          592
+        ],
+        [
+          238,
+          516,
+          2246
+        ]
+      ],
+      "macro_f1": 0.6499754272573993,
+      "macro_f1_drop": 0.0,
+      "model": "coverage",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 3104,
+        "collision": 3021,
+        "escape": 2875
+      },
+      "prediction_flip_percent": 0.0,
+      "prediction_flips": 0
+    },
+    {
+      "accuracy": 0.6472222222222223,
+      "accuracy_drop": 0.0018888888888888289,
+      "condition": "early",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          1853,
+          1099,
+          48
+        ],
+        [
+          682,
+          1741,
+          577
+        ],
+        [
+          190,
+          579,
+          2231
+        ]
+      ],
+      "macro_f1": 0.6505806305986689,
+      "macro_f1_drop": -0.0006052033412695668,
+      "model": "coverage",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 2725,
+        "collision": 3419,
+        "escape": 2856
+      },
+      "prediction_flip_percent": 4.9,
+      "prediction_flips": 441
+    },
+    {
+      "accuracy": 0.6465555555555556,
+      "accuracy_drop": 0.002555555555555533,
+      "condition": "middle",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          1814,
+          1136,
+          50
+        ],
+        [
+          655,
+          1765,
+          580
+        ],
+        [
+          191,
+          569,
+          2240
+        ]
+      ],
+      "macro_f1": 0.649929059704378,
+      "macro_f1_drop": 4.6367553021342545e-05,
+      "model": "coverage",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 2660,
+        "collision": 3470,
+        "escape": 2870
+      },
+      "prediction_flip_percent": 5.433333333333334,
+      "prediction_flips": 489
+    },
+    {
+      "accuracy": 0.40444444444444444,
+      "accuracy_drop": 0.24466666666666664,
+      "condition": "late",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2960,
+          40,
+          0
+        ],
+        [
+          2833,
+          89,
+          78
+        ],
+        [
+          2340,
+          69,
+          591
+        ]
+      ],
+      "macro_f1": 0.30319028712462615,
+      "macro_f1_drop": 0.3467851401327732,
+      "model": "coverage",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 8133,
+        "collision": 198,
+        "escape": 669
+      },
+      "prediction_flip_percent": 56.72222222222222,
+      "prediction_flips": 5105
+    },
+    {
+      "accuracy": 0.6524444444444445,
+      "accuracy_drop": 0.0,
+      "condition": "baseline",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2229,
+          751,
+          20
+        ],
+        [
+          1013,
+          1399,
+          588
+        ],
+        [
+          302,
+          454,
+          2244
+        ]
+      ],
+      "macro_f1": 0.649146078728371,
+      "macro_f1_drop": 0.0,
+      "model": "coverage_diverse",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 3544,
+        "collision": 2604,
+        "escape": 2852
+      },
+      "prediction_flip_percent": 0.0,
+      "prediction_flips": 0
+    },
+    {
+      "accuracy": 0.6326666666666667,
+      "accuracy_drop": 0.019777777777777783,
+      "condition": "early",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2761,
+          210,
+          29
+        ],
+        [
+          1703,
+          559,
+          738
+        ],
+        [
+          465,
+          161,
+          2374
+        ]
+      ],
+      "macro_f1": 0.5846910582894027,
+      "macro_f1_drop": 0.06445502043896834,
+      "model": "coverage_diverse",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 4929,
+        "collision": 930,
+        "escape": 3141
+      },
+      "prediction_flip_percent": 18.844444444444445,
+      "prediction_flips": 1696
+    },
+    {
+      "accuracy": 0.6331111111111111,
+      "accuracy_drop": 0.019333333333333425,
+      "condition": "middle",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          2757,
+          214,
+          29
+        ],
+        [
+          1696,
+          569,
+          735
+        ],
+        [
+          460,
+          168,
+          2372
+        ]
+      ],
+      "macro_f1": 0.5859994879761661,
+      "macro_f1_drop": 0.06314659075220497,
+      "model": "coverage_diverse",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 4913,
+        "collision": 951,
+        "escape": 3136
+      },
+      "prediction_flip_percent": 18.58888888888889,
+      "prediction_flips": 1673
+    },
+    {
+      "accuracy": 0.3492222222222222,
+      "accuracy_drop": 0.3032222222222223,
+      "condition": "late",
+      "confusion_matrix_true_rows_predicted_columns": [
+        [
+          0,
+          3000,
+          0
+        ],
+        [
+          0,
+          2991,
+          9
+        ],
+        [
+          0,
+          2848,
+          152
+        ]
+      ],
+      "macro_f1": 0.2004837531763042,
+      "macro_f1_drop": 0.44866232555206687,
+      "model": "coverage_diverse",
+      "n_examples": 9000,
+      "prediction_class_counts": {
+        "bound": 0,
+        "collision": 8839,
+        "escape": 161
+      },
+      "prediction_flip_percent": 69.27777777777777,
+      "prediction_flips": 6235
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "label_names": {
+    "0": "bound",
+    "1": "collision",
+    "2": "escape"
+  },
+  "proposal_names": {
+    "0": "virial",
+    "1": "cold_close",
+    "2": "hot_kick",
+    "3": "binary_intruder"
+  },
+  "splits": {
+    "test": {
+      "class_counts": {
+        "bound": 1000,
+        "collision": 1000,
+        "escape": 1000
+      },
+      "counterfactual_bases_successful": 270,
+      "counterfactual_bases_tested": 1344,
+      "counterfactual_fraction_realized": 0.18,
+      "proposal_counts_retained": {
+        "binary_intruder": 172,
+        "cold_close": 160,
+        "hot_kick": 426,
+        "virial": 2242
+      },
+      "rejected_ambiguous": 698,
+      "rejected_observed_event": 2109,
+      "retained": 3000,
+      "retained_counterfactual": 540,
+      "simulated": 7424,
+      "skipped_quota_full": 464
+    },
+    "train": {
+      "class_counts": {
+        "bound": 2667,
+        "collision": 2667,
+        "escape": 2666
+      },
+      "counterfactual_bases_successful": 720,
+      "counterfactual_bases_tested": 4096,
+      "counterfactual_fraction_realized": 0.18,
+      "proposal_counts_retained": {
+        "binary_intruder": 404,
+        "cold_close": 406,
+        "hot_kick": 1096,
+        "virial": 6094
+      },
+      "rejected_ambiguous": 1935,
+      "rejected_observed_event": 6103,
+      "retained": 8000,
+      "retained_counterfactual": 1440,
+      "simulated": 20864,
+      "skipped_quota_full": 1246
+    },
+    "val": {
+      "class_counts": {
+        "bound": 500,
+        "collision": 500,
+        "escape": 500
+      },
+      "counterfactual_bases_successful": 135,
+      "counterfactual_bases_tested": 704,
+      "counterfactual_fraction_realized": 0.18,
+      "proposal_counts_retained": {
+        "binary_intruder": 94,
+        "cold_close": 66,
+        "hot_kick": 200,
+        "virial": 1140
+      },
+      "rejected_ambiguous": 349,
+      "rejected_observed_event": 1109,
+      "retained": 1500,
+      "retained_counterfactual": 270,
+      "simulated": 3840,
+      "skipped_quota_full": 272
+    }
+  }
+}
